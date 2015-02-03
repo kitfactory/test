@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
 <head>
-<title>test</title>
+<meta charset=utf-8 />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+    <script src="http://vuejs.org/js/vue.min.js"></script>
+<title>Mojocat</title>
 </head>
 <body>
-Hello
+    <div id="app" class="container">
+        <p>{{message}}</p>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span>Title</span>
+                <button class="btn btn-warning" onclick="button_pushed(-1);">Add</button>
+            </div>
+            <ul class="list-group" id="sorttask">
+                <li v-repeat="item" class="list-group-item"><p>{{desc}}</p><button class="btn btn-primary" onclick="button_pushed({{$index}})";>Push-{{$index}}</button></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

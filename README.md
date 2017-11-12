@@ -4,7 +4,7 @@
 ## レンダラー(Vue.js?)
 ## イベントストリームは特に作らない。
 
-```uml
+```plantuml
 @startuml
 A-->B
 @enduml
